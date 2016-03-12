@@ -17,6 +17,8 @@ defmodule PhoenixTwitter.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    get "/about", AboutController, :index
+    get "/about/:messenger", AboutController, :show
   end
 
   # Other scopes may use custom stacks.
