@@ -19,6 +19,8 @@ defmodule PhoenixTwitter.Router do
     get "/", PageController, :index
     get "/about", AboutController, :index
     get "/about/:messenger", AboutController, :show
+
+    resources "/tweets", TweetController
   end
 
   # Other scopes may use custom stacks.
